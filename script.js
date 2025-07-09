@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import { gsap } from "gsap";
 
 // --- Audio Player ---
 // A simple utility to play sounds on user interaction.
@@ -79,4 +79,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-
