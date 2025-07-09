@@ -1,0 +1,127 @@
+:root {
+    --background-color: #f0f2f5;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --header-color: #1c2a44;
+    --accent-color: #007bff;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --shadow-color-hover: rgba(0, 0, 0, 0.12);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    background-image: url(sidewalk_texture.png);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--header-color);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    
+    /* For animation */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px var(--shadow-color-hover);
+}
+
+.card-icon {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--header-color);
+}
+
+.card p, .card ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.card ul {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+.main-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.main-footer .small-text {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    color: #888;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
+}
+
